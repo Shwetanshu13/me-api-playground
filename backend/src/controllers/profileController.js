@@ -1,4 +1,4 @@
-import { eq, inArray } from 'drizzle-orm';
+import { asc, eq, inArray } from 'drizzle-orm';
 import { db } from '../db/client.js';
 import { profiles, projects, projectSkills, workExperience } from '../db/schema.js';
 
@@ -19,13 +19,9 @@ async function fetchSkillsForProjects(projectIds) {
 
 export async function getProfile(req, res, next) {
     try {
-        const profileId = Number.parseInt(req.params.id, 10);
-        if (Number.isNaN(profileId)) {
-            return res.status(400).json({ error: 'invalid profile id' });
-        }
-
-        const [profile] = await db.select().from(profiles).where(eq(profiles.id, profileId));
+        const [profile] = await db.select().from(profiles).orderBy(asc(profiles.id)).limit(1);
         if (!profile) return res.status(404).json({ error: 'profile not found' });
+        const profileId = profile.id;
 
         const projectRows = await db
             .select()

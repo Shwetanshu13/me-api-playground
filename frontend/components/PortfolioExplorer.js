@@ -111,20 +111,19 @@ export default function PortfolioExplorer({
             <div className="mx-auto max-w-5xl px-4 py-12 sm:px-6 lg:px-8">
                 {/* Header Section */}
                 <header className="space-y-8">
-                    <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
-                        <ProfileHeader profile={profile} backendStatus={backendStatus} />
-                        <div className="w-full md:w-80 shrink-0">
-                            <SearchBox
-                                query={query}
-                                setQuery={setQuery}
-                                onSearch={runSearch}
-                                isPending={isPending}
-                            />
-                        </div>
+                    <ProfileHeader profile={profile} backendStatus={backendStatus} />
+
+                    <div className="mx-auto w-full max-w-2xl">
+                        <SearchBox
+                            query={query}
+                            setQuery={setQuery}
+                            onSearch={runSearch}
+                            isPending={isPending}
+                        />
                     </div>
 
                     {error && (
-                        <div className="rounded-xl border border-red-200 bg-red-50 p-4">
+                        <div className="mx-auto max-w-2xl rounded-xl border border-red-200 bg-red-50 p-4">
                             <p className="text-sm text-red-700">{error}</p>
                         </div>
                     )}

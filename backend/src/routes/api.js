@@ -8,7 +8,7 @@ router.get('/health', (req, res) => {
     res.json({ status: 'ok' });
 });
 
-router.get('/profiles/:id', getProfile);
+router.get('/profile', getProfile);
 router.get('/projects', getProjects);
 router.get('/skills/top', getTopSkills);
 router.get('/search', search);

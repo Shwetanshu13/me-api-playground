@@ -1,8 +1,17 @@
 import 'dotenv/config';
 import express from 'express';
+import cors from 'cors';
 import apiRouter from './routes/api.js';
 
 const app = express();
+
+const corsOrigin = process.env.CORS_ORIGIN || 'http://localhost:3000';
+app.use(
+    cors({
+        origin: corsOrigin,
+    })
+);
+
 app.use(express.json());
 
 app.use('/', apiRouter);

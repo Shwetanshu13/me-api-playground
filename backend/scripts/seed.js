@@ -84,17 +84,18 @@ async function main() {
     // ---------------- PROJECT SKILLS ----------------
     await db.insert(projectSkills).values([
         // You-Listen (Web)
+        { projectId: youListen.id, skill: 'Docker' },
         { projectId: youListen.id, skill: 'Next.js' },
         { projectId: youListen.id, skill: 'Node.js' },
         { projectId: youListen.id, skill: 'Express' },
         { projectId: youListen.id, skill: 'PostgreSQL' },
-        { projectId: youListen.id, skill: 'Docker' },
 
         // You-Listen-App (Mobile)
         { projectId: youListenApp.id, skill: 'React Native' },
         { projectId: youListenApp.id, skill: 'Expo' },
 
         // AI-DSA
+        { projectId: aiDsa.id, skill: 'BullMQ' },
         { projectId: aiDsa.id, skill: 'Next.js' },
         { projectId: aiDsa.id, skill: 'Node.js' },
         { projectId: aiDsa.id, skill: 'Express' },

@@ -84,39 +84,39 @@ async function main() {
     // ---------------- PROJECT SKILLS ----------------
     await db.insert(projectSkills).values([
         // You-Listen (Web)
-        { projectId: youListen.id, skill: 'next' },
-        { projectId: youListen.id, skill: 'node' },
-        { projectId: youListen.id, skill: 'express' },
-        { projectId: youListen.id, skill: 'postgres' },
-        { projectId: youListen.id, skill: 'docker' },
+        { projectId: youListen.id, skill: 'Next.js' },
+        { projectId: youListen.id, skill: 'Node.js' },
+        { projectId: youListen.id, skill: 'Express' },
+        { projectId: youListen.id, skill: 'PostgreSQL' },
+        { projectId: youListen.id, skill: 'Docker' },
 
         // You-Listen-App (Mobile)
-        { projectId: youListenApp.id, skill: 'react-native' },
-        { projectId: youListenApp.id, skill: 'expo' },
+        { projectId: youListenApp.id, skill: 'React Native' },
+        { projectId: youListenApp.id, skill: 'Expo' },
 
         // AI-DSA
-        { projectId: aiDsa.id, skill: 'nextjs' },
-        { projectId: aiDsa.id, skill: 'node' },
-        { projectId: aiDsa.id, skill: 'express' },
-        { projectId: aiDsa.id, skill: 'openai' },
-        { projectId: aiDsa.id, skill: 'postgres' },
-        { projectId: aiDsa.id, skill: 'mongodb' },
+        { projectId: aiDsa.id, skill: 'Next.js' },
+        { projectId: aiDsa.id, skill: 'Node.js' },
+        { projectId: aiDsa.id, skill: 'Express' },
+        { projectId: aiDsa.id, skill: 'OpenAI' },
+        { projectId: aiDsa.id, skill: 'PostgreSQL' },
+        { projectId: aiDsa.id, skill: 'MongoDB' },
 
         // Yes Chef
-        { projectId: yesChef.id, skill: 'nextjs' },
-        { projectId: yesChef.id, skill: 'postgres' },
-        { projectId: yesChef.id, skill: 'tailwind' },
+        { projectId: yesChef.id, skill: 'Next.js' },
+        { projectId: yesChef.id, skill: 'PostgreSQL' },
+        { projectId: yesChef.id, skill: 'Tailwind CSS' },
 
         // Vashu Bulks
-        { projectId: vashuBulks.id, skill: 'react-native' },
-        { projectId: vashuBulks.id, skill: 'expo' },
-        { projectId: vashuBulks.id, skill: 'ai' },
+        { projectId: vashuBulks.id, skill: 'React Native' },
+        { projectId: vashuBulks.id, skill: 'Expo' },
+        { projectId: vashuBulks.id, skill: 'AI/ML' },
 
         // Justoo
-        { projectId: justoo.id, skill: 'react' },
-        { projectId: justoo.id, skill: 'node' },
-        { projectId: justoo.id, skill: 'express' },
-        { projectId: justoo.id, skill: 'mongodb' },
+        { projectId: justoo.id, skill: 'React' },
+        { projectId: justoo.id, skill: 'Node.js' },
+        { projectId: justoo.id, skill: 'Express' },
+        { projectId: justoo.id, skill: 'MongoDB' },
     ]);
 
     // ---------------- WORK EXPERIENCE ----------------

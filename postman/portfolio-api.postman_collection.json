@@ -1,0 +1,105 @@
+{
+  "info": {
+    "name": "Portfolio API",
+    "_postman_id": "8e7c0c1a-0cb8-4b2a-a2f0-7b8c1d2e3f41",
+    "description": "Express + Drizzle + Postgres portfolio API collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Health",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/health"
+      }
+    },
+    {
+      "name": "Get Profile (id=1)",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/profiles/1"
+      }
+    },
+    {
+      "name": "List Projects",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/projects"
+      }
+    },
+    {
+      "name": "Search Projects (q)",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{baseUrl}}/projects?q=music",
+          "host": ["{{baseUrl}}"],
+          "path": ["projects"],
+          "query": [
+            {
+              "key": "q",
+              "value": "music"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Filter Projects (skill)",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{baseUrl}}/projects?skill=PostgreSQL",
+          "host": ["{{baseUrl}}"],
+          "path": ["projects"],
+          "query": [
+            {
+              "key": "skill",
+              "value": "PostgreSQL"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Search (q)",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{baseUrl}}/search?q=Next.js",
+          "host": ["{{baseUrl}}"],
+          "path": ["search"],
+          "query": [
+            {
+              "key": "q",
+              "value": "Next.js"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Top Skills",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{baseUrl}}/skills/top?limit=10",
+          "host": ["{{baseUrl}}"],
+          "path": ["skills", "top"],
+          "query": [
+            {
+              "key": "limit",
+              "value": "10"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:3001"
+    }
+  ]
+}

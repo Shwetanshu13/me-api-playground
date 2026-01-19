@@ -1,4 +1,4 @@
-import PortfolioExplorer from "./components/PortfolioExplorer";
+import { PortfolioExplorer } from "../components";
 import { fetchBackendJson } from "../lib/backend";
 
 export default async function Home() {

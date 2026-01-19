@@ -1,6 +1,6 @@
 import 'dotenv/config';
 
-console.log(process.env.DATABASE_URL)
+// console.log(process.env.DATABASE_URL)
 
 export default {
     schema: './src/db/schema.js',

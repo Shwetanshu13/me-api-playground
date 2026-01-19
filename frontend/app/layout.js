@@ -12,7 +12,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Portfolio",
+  title: "Shwetanshu Sinha",
   description: "A vibrant, light-themed portfolio powered by your backend.",
 };
 
